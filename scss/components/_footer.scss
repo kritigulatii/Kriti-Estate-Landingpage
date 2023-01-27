@@ -1,0 +1,122 @@
+footer {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    background: $primary-color;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background: url("/images/footer.svg");
+        background-size: cover;
+        height: 330px;
+        width: 250px;
+        top: -150px;
+        right: 0;
+
+        @include xl {
+            top: -70px;
+            height: 200px;
+            width: 150px;
+        }
+
+        @include lg {
+            top: -70px;
+            height: 150px;
+            width: 90px;
+        }
+
+        @include md {
+            top: -70px;
+            height: 150px;
+            width: 90px;
+        }
+    }
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    flex-wrap: wrap;
+
+    @include xl {
+        gap: 2rem;
+    }
+
+    @include lg {
+        justify-content: center;
+        gap: 2rem;
+
+        @include md {
+            justify-content: center;
+        }
+    }
+
+    .left-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10rem;
+
+        @include lg {
+            gap: 7rem;
+
+            @include md {
+                gap: 2.5rem;
+            }
+        }
+    }
+}
+
+.col-links {
+    display: flex;
+    flex-direction: column;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        input {
+            line-height: 27px;
+        }
+    }
+}
+
+.socials {
+    visibility: hidden;
+
+    @include xl {
+        visibility: hidden;
+    }
+
+    @include lg {
+        visibility: hidden;
+    }
+
+    @include md {
+        visibility: visible;
+        transform: rotate(180deg);
+        position: relative;
+        display: flex;
+        top: 2rem;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    @include sm {
+        visibility: visible;
+        transform: rotate(180deg);
+        position: relative;
+        display: flex;
+        top: 2rem;
+        justify-content: center;
+        gap: 20px;
+    }
+
+
+    a img {
+        transform: rotate(180deg);
+    }
+}

@@ -1,0 +1,19 @@
+@import './content-40-60';
+@import './hero';
+@import './about';
+@import './planning';
+@import './faq';
+@import './form';
+
+.container{
+  max-width: 65%;
+  margin: 0 auto;
+
+  @include lg{
+    max-width: 90%;
+  }
+
+  @include md{
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,79 @@
+.faq-head{
+  padding-top: 100px;
+}
+
+.accordion-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 100px;
+  
+    .accordion {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      width: 100%;
+      height: 82px;
+      text-align: left;
+      outline: none;
+      transition: 0.4s;
+
+      @include md{
+        gap: 10px;
+      }
+    }
+    .top:after {
+      content: "";
+      display: inline-block;
+      position: relative;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-top: 0.2rem solid $secondary-color;
+      border-right: 0.2rem solid $secondary-color;
+      -moz-transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+      transform: rotate(135deg);
+    }
+    
+    
+    .active .top:after {
+      content: "";
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-top: 0.2rem solid $secondary-color;
+      border-right: 0.2rem solid $secondary-color;
+      -moz-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+    
+    
+    .active {
+      color: $secondary-color;
+    }
+  
+    .panel {
+      border-bottom: 1px solid black;
+      max-width: 1440px;
+      width: 100%;
+      font-size: 18px;
+      max-height: 0;
+      padding-right: 100px;
+      overflow: hidden;
+      background-color: $font-base;
+      transition: max-height 0.3s ease-out;
+      font-size: 16px;
+
+      @include md{
+        padding-right: 0px;
+      }
+    
+     
+    }
+  }

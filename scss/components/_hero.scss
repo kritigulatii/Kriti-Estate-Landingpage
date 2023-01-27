@@ -1,0 +1,157 @@
+.banner {
+  // background: $primary-color;
+  display: flex;
+
+
+  @include md{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .hero-image {
+    background: $primary-color;
+    display: flex;
+    width: 41.5%;
+
+    .hero-text {
+      text-align: left;
+      color: $tertiary-color;
+      position: absolute;
+      width: 45%;
+      margin-left: 9%;
+      margin-top: 12%;
+      z-index: 0;
+
+  
+
+      @include xl{
+        text-align: left;
+      color: $tertiary-color;
+      position: absolute;
+      width: 50%;
+      margin-left: 8%;
+      margin-top: 4%;
+      z-index: 0;
+      }
+      @include lg{
+        // text-align: center;
+        position: relative;
+        left: 0;
+        top: 0px;
+        // margin: 100px auto;
+        width: 80%;
+      }
+
+
+      @include md{
+        text-align: center;
+        position: relative;
+        left: 0;
+        top: 0px;
+        margin: 50px auto;
+        width: 100%;
+      }
+    }
+
+    @include xl{
+      width: 60%;
+    }
+    @include lg{
+      width: 50%;
+    }
+
+    @include md{
+      width: 100%;
+    }
+
+    
+
+    .social{
+      cursor: pointer;
+      position: fixed;
+      top: 30rem;
+      left: 1.5rem;
+
+      @include lg{
+        position: relative;
+        width: 5%;
+        top: 12rem;
+        left: -20rem;
+      }
+      @include md{
+        visibility: hidden;
+      }
+      @include sm{
+        visibility: hidden;
+      }
+    }
+
+
+  }
+
+  .scroll-img {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+
+    @include lg{
+      width: 50%;
+    }
+
+    @include md {
+      width: 100%;
+    }
+
+    .back-img {
+      max-width: 100%;
+    }
+
+    .scroll-icon{
+      height: 20%;
+      position: absolute;
+      top: 28rem;
+      right: 10rem;
+
+      @include xl{
+        top: 13rem;
+        right: 4rem;
+        height: 10%;
+      }
+      // @include lg{
+      //   top: 9.5rem;
+      //   left: -20.5rem;
+      // }
+      @include md{
+        visibility: hidden;
+      }
+    }
+
+  }
+}
+
+.social{
+  // width: 170px;
+  position: fixed;
+  left: -2.5rem;
+  top: 35.5rem;
+  transform: rotate(90deg);
+
+  @include xl{
+    left: -4rem;
+  }
+  @include lg{
+    left: -4rem;
+  }
+  @include md{
+    visibility: hidden;
+  }
+  @include sm{
+    visibility: hidden;
+  }
+
+
+  a img{
+      transform: rotate(270deg);
+  }
+}

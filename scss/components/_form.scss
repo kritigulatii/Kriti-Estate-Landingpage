@@ -1,0 +1,162 @@
+.call-form {
+    // height: 527px;
+    display: flex;
+
+    @include lg {
+        flex-direction: column;
+    }
+    @include md {
+        flex-direction: column;
+    }
+
+    .calling {
+        background: $secondary-color;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        width: 40%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        position: relative;
+
+        .house-img img{
+            position: absolute;
+            opacity: 0.9;
+            left: -6px;
+            width: 268px;
+            height: 262px;
+            bottom: 0;
+        }
+
+        @include lg {
+            width: 100%;
+        }
+        @include md {
+            width: 100%;
+        }
+
+        // .house-img {
+        //     position: relative;
+        //     top: 50px;
+        //     padding-top: 5rem;
+
+        //     @include lg {
+        //         width: 30%;
+        //     }
+        //     @include md {
+        //         display: none;
+        //     }
+        // }
+
+        .get-in-touch {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            img {
+                position: relative;
+                left: -4px;
+                top: 2px;
+            }
+        }
+    }
+
+    .form {
+        background: $tertiary-color;
+        width: 60%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        @include lg {
+            width: 100%;
+        }
+        @include md {
+            width: 100%;
+        }
+
+        .container {
+            max-width: 85%;
+        }
+    }
+
+    .form1 {
+        display: flex;
+        gap: 50px;
+
+        @include md {
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .checkbox {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-top: 30px;
+            gap: 10px;
+            #tc {
+                border: 1px solid $secondary-color;
+                padding: 8px;
+                width: 25px;
+                height: 25px;
+                font-weight: 600;
+            }
+        }
+        input,
+        select {
+            border: 1px solid $secondary-color;
+            padding: 8px;
+            width: 321.5px;
+            height: 40px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: $font-base-2;
+            font-family: $font-stack-p;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        input::placeholder {
+            font-family: $font-stack-p;
+            font-size: 14px;
+            font-weight: 600;
+            color: $font-base-2;
+        }
+
+        select:required:invalid {
+            color: $font-base-2;
+            font-family: $font-stack-p;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        textarea {
+            border: 1px solid $secondary-color;
+            width: 321.5px;
+            font-weight: 600;
+            color: $font-base-2;
+            font-family: $font-stack-p;
+            font-size: 14px;
+            resize: none;
+
+            @include md {
+                margin-bottom: 20px;
+            }
+        }
+
+        textarea::placeholder {
+            font-family: $font-stack-p;
+            font-size: 14px;
+            font-weight: 600;
+            color: $font-base-2;
+            padding-left: 0.4rem;
+            padding-top: 0.4rem;
+        }
+    }
+}

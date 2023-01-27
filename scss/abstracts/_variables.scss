@@ -1,0 +1,52 @@
+$primary-color: #01383c;
+$secondary-color: #099e71;
+$tertiary-color: #f1f8f6;
+$font-base: #fff;
+$font-base-2: #707070;
+$black: #000000;
+$font-stack-p: "Poppins", sans-serif;
+$font-stack-head: "Playfair Display", serif;
+
+$breakpoints: (
+  'phone': 375px,
+  'tablet': 768px,
+  'laptop': 1024px,
+  'desktop':1440px,
+  'lgdesktop':1800px
+);
+
+@mixin sm{
+    @media(max-width: map-get($breakpoints, phone)){
+        @content;
+    }
+}
+@mixin md{
+    @media(max-width: map-get($breakpoints, tablet)){
+        @content;
+    }
+}
+@mixin lg{
+    @media(max-width: map-get($breakpoints, laptop)){
+        @content;
+    }
+}
+@mixin xl{
+    @media(max-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}
+@mixin xxl{
+    @media(max-width: map-get($breakpoints, lgdesktop)){
+        @content;
+    }
+}
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+  }
+
+  @mixin media-md {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+}
